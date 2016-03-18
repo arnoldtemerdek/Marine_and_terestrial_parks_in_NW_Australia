@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marine and terestrial parks in NW Australia</title>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="scripts/map.js"></script>
+<script src="data/parks.js"></script>
+
+</head>
+<body onload='init()'>
+	<div id="map" class="map"></div>
+	<div id="slider">
+		<input type="range" name="points" min="0" max="4" value="0" onchange="showValue(this.value)">
+		<span id="range">2010.12.20</span>
+	</div>
+</body>
+</html>

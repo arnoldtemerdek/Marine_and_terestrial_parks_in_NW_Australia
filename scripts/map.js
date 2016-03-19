@@ -19,6 +19,9 @@ var sentence = "";
 				style: myStyle,
 				filter: function(feature, layer){
 					return feature.properties.show0;
+				},
+				onEachFeature: function (feature, layer) {
+					layer.bindPopup(feature.properties.NAME);
 				}
 			}
 			).addTo(map);
@@ -30,6 +33,9 @@ var sentence = "";
 				style: myStyle,
 				filter: function(feature, layer){
 					return feature.properties.show1;
+				},
+				onEachFeature: function (feature, layer) {
+					layer.bindPopup(feature.properties.NAME);
 				}
 			}
 			).addTo(map);
@@ -41,6 +47,9 @@ var sentence = "";
 				style: myStyle,
 				filter: function(feature, layer){
 					return feature.properties.show2;
+				},
+				onEachFeature: function (feature, layer) {
+					layer.bindPopup(feature.properties.NAME);
 				}
 			}
 			).addTo(map);
@@ -52,6 +61,9 @@ var sentence = "";
 				style: myStyle,
 				filter: function(feature, layer){
 					return feature.properties.show3;
+				},
+				onEachFeature: function (feature, layer) {
+					layer.bindPopup(feature.properties.NAME);
 				}
 			}
 			).addTo(map);
@@ -63,6 +75,9 @@ var sentence = "";
 				style: myStyle,
 				filter: function(feature, layer){
 					return feature.properties.show4;
+				},
+				onEachFeature: function (feature, layer) {
+					layer.bindPopup(feature.properties.NAME);
 				}
 			}
 			).addTo(map);
@@ -81,8 +96,11 @@ L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
 
 parks=L.geoJson(geojsonFeature, {
 				style: myStyle,
-				filter: function(feature, layer){
-					return feature.properties.show0;
+				filter: function(feature, layer){						
+						return feature.properties.show0
+				},
+				onEachFeature: function (feature, layer) {
+					layer.bindPopup(feature.properties.NAME);
 				}
 			}
 			).addTo(map);
